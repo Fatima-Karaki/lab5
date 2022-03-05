@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" width="100%" href="pizza.css" />
+    <title> Lab 5 Fatima Karaki</title>
+</head>
+
+<body>
+    <header>
+        <h1 class="Header"> Pizza Order Form</h1>
+    </header>
+    <div id="section1">
+    <form action="">
+        <fieldset class="field">
+            
+            <div>
+                <span class="size">Size:</span>
+                <input onchange=ChangePizzaSize() type="range" min="1" max="4" value="1" class="slider" id="myRange">
+                <span id="PizzaSize">Small</span> 
+                <span class="size" id="price" >6$</span>
+              </div>
+            <div class="center" >
+            <img id="pizzaimg" class="image" src="pizza.png" alt="Pizza"/> </div>
+
+        </fieldset>
+    </form>
+
+    <form action="">
+        <fieldset class="field">
+            <legend>Meat Toppings (+2$ for each)</legend>
+            <input type="checkbox" class="meat" value="Pepperoni" > Pepperoni <br>
+            <input type="checkbox" class="meat" value="Sausage"> Sausage <br>
+            <input type="checkbox" class="meat" value="Ground Beef"> Ground Beef <br>
+            <input type="checkbox" class="meat" value="Anchovy"> Anchovy <br>
+            <input type="checkbox" class="meat" value="Chicken"> Chicken <br>
+
+        </fieldset>
+    </form>
+    <form action="">
+        <fieldset class="field">
+            <legend>Veggies (+1$ for each)</legend>
+            <input type="checkbox" class="veg" value="Tomatoes" > Tomatoes <br>
+            <input type="checkbox" class="veg" value="Onions"> Onions <br>
+            <input type="checkbox" class="veg" value="Olives"> Olives <br>
+            <input type="checkbox" class="veg" value="Mushrooms"> Mushrooms <br>
+            <input type="checkbox" class="veg" value="Pineapple"> Pineapple <br>
+            <input type="checkbox" class="veg" value="Spinach"> Spinach <br>
+            <input type="checkbox" class="veg" value="Jalapeno"> Jalapeno <br>
+
+
+
+        </fieldset>
+    </form>
+
+    <form action="">
+        <fieldset class="field">
+            <legend>Cheese </legend>
+            <input type="radio" name="cheese" class="cheese" value="Regular" id="r"> Regular Cheese <br>
+            <input type="radio" name="cheese" class="cheese" value="No Cheese" id="n"> No Cheese <br>
+            <input type="radio" name="cheese" class="cheese" value="Extra Cheese" id="e"> Extra Cheese ($3) <br>
+        </fieldset>
+    </form>
+    <form action="">
+        <fieldset class="field">
+            <legend> Payment </legend>
+            <input type="radio" name="pay" > Cash 
+            <input type="radio" name="pay"> MasterCard 
+            <input type="radio" name="pay"> Visa 
+        </fieldset>
+    </form>
+    <button onclick="gotoPage(2)" class="next1" id="next1"> Next</button>
+</div>
+
+<button onclick=test()> Click me</button>
+
+   
+<div class="address" id="section2">
+    <form action="" >
+        <label  for="fname">First name:</label><br>
+        <input class="texts" type="text" id="fname" name="fname"><br>
+        <label for="lname">Last name:</label><br>
+        <input class="texts" type="text" id="lname" name="lname"> <br>
+        <label for="email">E-mail:</label><br>
+        <input  class="texts" type="text" id="email" name="email"> <br>
+
+        <label for="phone">Phone Number:</label><br>
+        <input class="texts" type="text" id="phone" name="phone"> <br>
+
+        <label for="city">City:</label><br>
+        <select id="city" class="texts" name="cities" >
+            <option value="">--Please choose an option--</option>
+            <option >Beirut</option>
+            <option > Nabatieh</option>
+            <option > Tyre</option>
+           
+          </select>
+          <br>
+          <label for="Address">Address:</label><br>
+          <textarea id="address" class="texts" rows="4">
+
+          </textarea>
+    </form>
+    <button id="back1" class="back" onclick=gotoPage(1) > Back</button>
+    <button id="next2" class="next2" onclick="checkInfo();"> Next</button>
+</div>
+<br>
+<br>
+<br>
+
+<div id="section3">
+<div id="OrderSummary">
+    <h1>Order Summary</h1>
+    <h2>Deliver to</h2>
+    <p id="dlvrTo"></p>
+    <h2>Order</h2>
+    <ul id="orderList"></ul>
+    <h2 id="total">Total</h2>
+</div>
+<br>
+<button onclick=gotoPage(2) class="back2" id="back2"> Back</button>
+</div>
+
+ <script src="pizza.js"></script>   
+</body>
+</html>
